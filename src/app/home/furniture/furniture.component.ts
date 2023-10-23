@@ -28,13 +28,13 @@ export class FurnitureComponent implements OnInit, OnDestroy {
   }
 
   public sliders = [{
-    title: 'furniture sofa',
-    subTitle: 'harmony sofa',
-    image: 'assets/images/slider/12.jpg'
+    title: '',
+    subTitle: '',
+    image: 'assets/images/slider/slider-1.jpg'
   }, {
     title: 'furniture sofa',
-    subTitle: 'harmony sofa',
-    image: 'assets/images/slider/13.jpg'
+    subTitle: 'Inspirasi sofa',
+    image: 'assets/images/slider/slider-2.jpg'
   }];
 
   // Collection banner

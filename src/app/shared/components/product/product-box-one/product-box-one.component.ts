@@ -17,6 +17,7 @@ export class ProductBoxOneComponent implements OnInit {
   @Input() onHowerChangeImage: boolean = false; // Default False
   @Input() cartModal: boolean = false; // Default False
   @Input() loader: boolean = false;
+  urlProduct: string;
   
   @ViewChild("quickView") QuickView: QuickViewComponent;
   @ViewChild("cartModal") CartModal: CartModalComponent;
@@ -28,6 +29,9 @@ export class ProductBoxOneComponent implements OnInit {
   ngOnInit(): void {
     if(this.loader) {
       setTimeout(() => { this.loader = false; }, 2000); // Skeleton Loader
+    }
+    if (this.product) {
+      this.urlProduct = `${location.origin}/shop/product/left/sidebar/${this.product.title.replace(' ', '-')}`;
     }
   }
 

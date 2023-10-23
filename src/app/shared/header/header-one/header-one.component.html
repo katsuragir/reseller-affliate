@@ -20,7 +20,7 @@
               <i class="fa fa-user" aria-hidden="true"></i> My Account
               <ul class="onhover-show-div">
                 <li>
-                  <a data-lng="en">
+                  <a [routerLink]="['/pages/login']" data-lng="en">
                     Login
                   </a>
                 </li>
@@ -43,7 +43,7 @@
           <div class="menu-left">
             <!-- <app-left-menu></app-left-menu> -->
             <div class="brand-logo">
-              <a routerLink="/home/fashion" id="headerlogo">
+              <a routerLink="/home/furniture" id="headerlogo">
                 <img [src]="themeLogo" class="img-fluid logo" alt="logo">
               </a>
             </div>

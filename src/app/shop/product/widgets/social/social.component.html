@@ -1,8 +1,24 @@
 <ul class="product-social">
     <li>
-      <a href="https://www.facebook.com/">
-        <i class="fa fa-facebook"></i>
-      </a>
+      <!-- <button
+        mat-fab
+        shareButton="whatsapp"
+        #twtBtn="shareButton"
+        class="share-button"
+        [title]="product.title"
+        [description]="product.description"
+        [image]="'https://www.atria.co.id/bintaro-jaya/wp-content/uploads/2023/09/Atria-Logo-1.png'"
+        [url]="urlProduct"
+      >
+        <fa-icon *ngIf="twtBtn" [icon]="twtBtn.icon" size="lg"></fa-icon>
+      </button> -->
+      <share-button [theme]="'circles-light'"
+      [button]="'whatsapp'"
+      [title]="product.title"
+      [description]="product.description"
+      [image]="'https://www.atria.co.id/bintaro-jaya/wp-content/uploads/2023/09/Atria-Logo-1.png'"
+      [url]="urlProduct"
+      ></share-button>
     </li>
     <li>
       <a href="https://plus.google.com/discover">

@@ -49,7 +49,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         }
     }),
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

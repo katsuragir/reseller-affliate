@@ -54,6 +54,19 @@ import { TapToTopComponent } from './components/tap-to-top/tap-to-top.component'
 // Pipes
 import { DiscountPipe } from './pipes/discount.pipe';
 
+// ngx-sharebutton
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faFacebookSquare, faWhatsapp, faSquareWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
+const icons = [
+  // ... other icons
+  faFacebookSquare,
+  faWhatsapp,
+  faSquareWhatsapp
+];
+
 @NgModule({
   declarations: [
     HeaderOneComponent,
@@ -100,7 +113,9 @@ import { DiscountPipe } from './pipes/discount.pipe';
       // preset: scrollPreset // <-- tell LazyLoadImage that you want to use scrollPreset
     }),
     NgxSkeletonLoaderModule,
-    TranslateModule
+    TranslateModule,
+    ShareButtonsModule,
+    ShareIconsModule,
   ],
   exports: [
     CommonModule,
@@ -142,4 +157,8 @@ import { DiscountPipe } from './pipes/discount.pipe';
     DiscountPipe
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+  constructor(iconLibrary: FaIconLibrary) {
+    iconLibrary.addIcons(...icons);
+  }
+}

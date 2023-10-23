@@ -34,7 +34,7 @@ export class NavService {
 
 	MENUITEMS: Menu[] = [
 		{
-			title: 'home', type: 'sub', active: false, 
+			title: 'home', type: 'link', active: false, path:'/home/furniture'
 			// children: [
 			// 	{
 			// 		title: 'clothing', type: 'sub', active: false, children: [

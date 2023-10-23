@@ -41,7 +41,18 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { CompareComponent } from './compare/compare.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SuccessComponent } from './checkout/success/success.component';
+// ngx-sharebutton
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faFacebookSquare, faWhatsapp, faSquareWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
+const icons = [
+  // ... other icons
+  faFacebookSquare,
+  faWhatsapp,
+  faSquareWhatsapp
+];
 
 @NgModule({
   declarations: [
@@ -79,7 +90,13 @@ import { SuccessComponent } from './checkout/success/success.component';
     Ng5SliderModule,
     InfiniteScrollModule,
     SharedModule,
-    ShopRoutingModule
+    ShopRoutingModule,
+    ShareButtonsModule,
+    ShareIconsModule,
   ]
 })
-export class ShopModule { }
+export class ShopModule {
+  constructor(iconLibrary: FaIconLibrary) {
+    iconLibrary.addIcons(...icons);
+  }
+}
